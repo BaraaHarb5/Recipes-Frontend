@@ -12,7 +12,6 @@ export const searchRecipes = async (query) => {
 
 export const getRecipeDetails = async (id) => {
   const response = await axios.get(`${API_BASE}/${id}`);
-  console.log(response.data);
   return response.data;
 };
 
