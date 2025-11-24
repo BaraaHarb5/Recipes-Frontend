@@ -7,7 +7,7 @@ export default function RecipeCard({ recipe }) {
                     transition-all duration-300 overflow-hidden
                     group cursor-pointer">
 
-            {/* Image */}
+      
             <div className="relative   overflow-hidden">
                 <img
                     src={recipe.image}
@@ -16,28 +16,26 @@ export default function RecipeCard({ recipe }) {
                      group-hover:scale-110 transition-all duration-500"
                 />
 
-                {/* Soft Overlay */}
-                {/*<div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0*/}
-                {/*        group-hover:opacity-100 transition"></div>*/}
+           
             </div>
 
-            {/* Body */}
+           
             <div className="p-5 space-y-3">
 
-                {/* Title */}
+           
                 <h3 className="font-bold text-xl text-gray-800 leading-snug
                        group-hover:text-blue-600 transition-colors line-clamp-2">
                     {recipe.title}
                 </h3>
 
-                {/* Description */}
+              
                 {recipe.description && (
                     <p className="text-sm text-gray-600 line-clamp-2">
                         {recipe.description}
                     </p>
                 )}
 
-                {/* Tags */}
+           
                 {recipe.tags?.length > 0 && (
                     <div className="flex flex-wrap gap-2 pt-1">
                         {recipe.tags.map((tag) => (
