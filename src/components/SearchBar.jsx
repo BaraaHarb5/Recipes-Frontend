@@ -23,10 +23,10 @@ export default function SearchBar({ onSearch }) {
         focus-within:ring-2 focus-within:ring-blue-500
       "
         >
-            {/* Search icon */}
+         
             <FiSearch className="text-gray-500 text-xl ml-2" />
 
-            {/* Input */}
+         
             <input
                 className="
           flex-1
@@ -41,7 +41,7 @@ export default function SearchBar({ onSearch }) {
                 onChange={(e) => setValue(e.target.value)}
             />
 
-            {/* Search button */}
+      
             <button
                 className="
           bg-blue-600
