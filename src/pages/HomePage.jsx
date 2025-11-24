@@ -4,17 +4,17 @@ import RecipeCard from "../components/RecipeCard";
 import { searchRecipes } from "../api/recipeApi";
 
 export default function HomePage() {
-  const [results, setResults] = useState([]);
+  const [results, setRecipesResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const handleSearch = async (query) => {
     if (!query) return;
     setLoading(true);
-    setError(null);
+    setError(undefined);
     try {
       const data = await searchRecipes(query);
-      setResults(data);
+      setRecipesResults(data);
     } catch (err) {
       console.error(err);
       setError("Failed to fetch results. Is the backend running?");
